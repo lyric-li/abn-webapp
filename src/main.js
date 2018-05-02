@@ -7,6 +7,7 @@ import store from './store'
 
 import './vant'
 import './icons'
+import './utils/components'
 
 Vue.config.productionTip = false
 
