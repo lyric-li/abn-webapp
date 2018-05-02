@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '@/store'
 
 const home = reslove => require(['@/pages/home'], reslove)
 
@@ -25,6 +26,8 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
+  const title = to.meta.titie || 'abn'
+  store.commit('SET_TITLE', title)
   next()
 })
 

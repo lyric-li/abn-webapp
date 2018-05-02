@@ -1,7 +1,7 @@
 <template>
   <div class="abn-navbar">
     <van-nav-bar
-      title="标题"
+      :title="$store.state.title"
       left-text="返回"
       right-text="按钮"
       left-arrow
