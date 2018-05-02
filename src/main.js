@@ -4,21 +4,23 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import {
-  Button,
-  NavBar,
-  Tabbar,
-  TabbarItem,
-  Swipe,
-  SwipeItem
-} from 'vant'
+import './vant'
 
-Vue.use(Button)
-  .use(NavBar)
-  .use(Tabbar)
-  .use(TabbarItem)
-  .use(Swipe)
-  .use(SwipeItem)
+// import {
+//   Button,
+//   NavBar,
+//   Tabbar,
+//   TabbarItem,
+//   Swipe,
+//   SwipeItem
+// } from 'vant'
+
+// Vue.use(Button)
+//   .use(NavBar)
+//   .use(Tabbar)
+//   .use(TabbarItem)
+//   .use(Swipe)
+//   .use(SwipeItem)
 
 Vue.config.productionTip = false
 
