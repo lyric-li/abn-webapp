@@ -5,7 +5,7 @@ const home = reslove => require(['@/pages/home'], reslove)
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/home',
@@ -23,3 +23,9 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  next()
+})
+
+export default router
