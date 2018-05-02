@@ -3,11 +3,14 @@
     <van-nav-bar
       :title="$store.state.title"
       left-text="返回"
-      right-text="按钮"
       left-arrow
       @click-left="onClickLeft"
       @click-right="onClickRight"
-    />
+    >
+      <abn-icon iconClass="github"
+                slot="right"
+      />
+    </van-nav-bar>
   </div>
 </template>
 
@@ -24,7 +27,7 @@ export default {
       console.log('返回')
     },
     onClickRight () {
-      console.log('按钮')
+      window.location.href = 'https://gitee.com/lyric-li/abn-webapp'
     }
   }
 }

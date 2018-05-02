@@ -6,6 +6,7 @@ import router from './router'
 import store from './store'
 
 import './vant'
+import './icons'
 
 Vue.config.productionTip = false
 
