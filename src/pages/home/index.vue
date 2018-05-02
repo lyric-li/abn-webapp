@@ -23,9 +23,9 @@ export default {
 .abn-home
   .abn-swipe
     background-color #fff
-    height 200px
+    height 20rem
     text-align center
     .abn-swipe-item
-      height 200px
-      line-height 200px
+      height 20rem
+      line-height 20rem
 </style>

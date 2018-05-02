@@ -1,0 +1,51 @@
+/* 如需适配多种移动设备，建议使用rem */
+html
+  font-size 62.5%
+
+body
+  font-family "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif
+  /* 设置14px字体 这里注意在rem前要加上对应的px值，解决不支持rem的浏览器的兼容问题，做到优雅降级 */
+  font-size 14px
+  font-size 1.4rem
+  margin 0
+  margin-top -2px
+  overflow hidden
+
+/* 美化滚动条 */
+::-webkit-scrollbar
+  width .25rem
+  height .25rem
+  background hsla(0, 0%, 100%, 0.6)
+::-webkit-scrollbar-track
+  border-radius .25rem
+::-webkit-scrollbar-thumb
+  border-radius .25rem
+  background-color rgba(95,95,95,.4)
+  transition background-color .25s
+  &:hover
+    background-color rgba(95,95,95, .7)
+
+// 引入字体图标
+// @import "./iconfont.styl"
+
+// 引入颜色
+@import "./color.styl"
+
+// 引入过渡动效
+@import "./trans.styl"
+
+// /* 小屏幕（平板，大于等于 768px） */
+// @media (min-width: 768px)
+//   body
+//     width: 45%
+//     margin: 0 auto
+// /* 中等屏幕（桌面显示器，大于等于 992px） */
+// @media (min-width: 992px)
+//   body
+//     width: 40%
+//     margin: 0 auto
+// /* 大屏幕（大桌面显示器，大于等于 1200px） */
+// @media (min-width: 1200px)
+//   body
+//     width: 35%
+//     margin: 0 auto

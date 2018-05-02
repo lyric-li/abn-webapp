@@ -31,12 +31,11 @@ export default {
 }
 </script>
 
-<style scoped>
-.svg-icon {
-  width: 1.4em;
-  height: 1.4em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-}
+<style lang="stylus" scoped>
+.svg-icon
+  width 1.4rem
+  height 1.4rem
+  vertical-align -0.15em
+  fill currentColor
+  overflow hidden
 </style>
