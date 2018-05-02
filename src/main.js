@@ -8,13 +8,17 @@ import {
   Button,
   NavBar,
   Tabbar,
-  TabbarItem
+  TabbarItem,
+  Swipe,
+  SwipeItem
 } from 'vant'
 
 Vue.use(Button)
   .use(NavBar)
   .use(Tabbar)
   .use(TabbarItem)
+  .use(Swipe)
+  .use(SwipeItem)
 
 Vue.config.productionTip = false
 
