@@ -5,10 +5,14 @@ import App from './App'
 import router from './router'
 
 import {
-  Button
+  Button,
+  Tabbar,
+  TabbarItem
 } from 'vant'
 
 Vue.use(Button)
+  .use(Tabbar)
+  .use(TabbarItem)
 
 Vue.config.productionTip = false
 
