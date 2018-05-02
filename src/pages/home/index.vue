@@ -15,13 +15,13 @@ export default {
 }
 </script>
 
-<style scoped>
-.home .swipe {
-  height: 200px;
-  background-color: #eee;
-}
-.home .swipe .swipe-item {
-  height: 200px;
-  line-height: 200px;
+<style lang="stylus" scoped>
+.home
+  .swipe
+    height 200px
+    background-color #eee
+    .swipe-item {
+      height 200px
+      line-height 200px
 }
 </style>
