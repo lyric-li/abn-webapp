@@ -6,11 +6,13 @@ import router from './router'
 
 import {
   Button,
+  NavBar,
   Tabbar,
   TabbarItem
 } from 'vant'
 
 Vue.use(Button)
+  .use(NavBar)
   .use(Tabbar)
   .use(TabbarItem)
 
