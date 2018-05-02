@@ -3,24 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 
 import './vant'
-
-// import {
-//   Button,
-//   NavBar,
-//   Tabbar,
-//   TabbarItem,
-//   Swipe,
-//   SwipeItem
-// } from 'vant'
-
-// Vue.use(Button)
-//   .use(NavBar)
-//   .use(Tabbar)
-//   .use(TabbarItem)
-//   .use(Swipe)
-//   .use(SwipeItem)
 
 Vue.config.productionTip = false
 
@@ -28,6 +13,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
