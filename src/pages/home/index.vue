@@ -1,10 +1,14 @@
 <template>
-  <div class="home">
-    <van-swipe class="swipe" :autoplay="3000">
-      <van-swipe-item class="swipe-item">1</van-swipe-item>
-      <van-swipe-item class="swipe-item">2</van-swipe-item>
-      <van-swipe-item class="swipe-item">3</van-swipe-item>
-      <van-swipe-item class="swipe-item">4</van-swipe-item>
+  <div class="abn-home">
+    <van-swipe class="abn-swipe"
+               :autoplay="3000"
+    >
+      <van-swipe-item class="abn-swipe-item"
+                      :key="index"
+                      v-for="(item, index) in 5"
+      >
+        {{ item }}
+      </van-swipe-item>
     </van-swipe>
   </div>
 </template>
@@ -16,12 +20,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.home
-  .swipe
+.abn-home
+  .abn-swipe
+    background-color #fff
     height 200px
-    background-color #eee
-    .swipe-item {
+    text-align center
+    .abn-swipe-item
       height 200px
       line-height 200px
-}
 </style>

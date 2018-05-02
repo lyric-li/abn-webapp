@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <!-- 背景 -->
+    <abn-background/>
     <!-- 导航栏 -->
     <abn-navbar/>
     <router-view/>
@@ -9,24 +11,19 @@
 </template>
 
 <script>
+import AbnBackground from '@/components/layout/abn-background'
 import AbnNavbar from '@/components/layout/abn-navbar'
 import AbnTabbar from '@/components/layout/abn-tabbar'
 export default {
   name: 'app',
   components: {
+    AbnBackground,
     AbnNavbar,
     AbnTabbar
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  /* margin-top: 60px; */
-}
+<style lang="stylus">
+
 </style>
