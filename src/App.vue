@@ -26,8 +26,3 @@ export default {
   }
 }
 </script>
-
-<style lang="stylus">
-@import '~@/assets/styl/app.styl'
-@import '~@/assets/vivify/vivify.min.css'
-</style>

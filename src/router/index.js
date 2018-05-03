@@ -6,6 +6,8 @@ import store from '@/store'
 const home = reslove => require(['@/pages/home'], reslove)
 // 动弹
 const barrage = reslove => require(['@/pages/barrage'], reslove)
+// 个人中心
+const personal = reslove => require(['@/pages/personal'], reslove)
 
 Vue.use(Router)
 
@@ -25,6 +27,14 @@ const router = new Router({
       component: barrage,
       meta: {
         titie: '动弹'
+      }
+    },
+    {
+      path: '/personal',
+      name: 'personal',
+      component: personal,
+      meta: {
+        titie: '个人中心'
       }
     },
     {
