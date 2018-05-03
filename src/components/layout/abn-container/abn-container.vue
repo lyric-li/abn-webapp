@@ -18,8 +18,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '~@/assets/styl/variables.styl'
+// @import '~@/assets/styl/variables.styl'
 .abn-container
-  padding $container-padding
-  height 100vh - (46px + 50px) - $container-padding * 2
+  // padding $container-padding
+  // height 100vh - (46px + 50px) - $container-padding * 2
+  height 100vh - (46px + 50px)
 </style>

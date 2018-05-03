@@ -5,7 +5,9 @@ import {
   Tabbar,
   TabbarItem,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  Cell,
+  CellGroup
 } from 'vant'
 
 Vue.use(Button)
@@ -14,3 +16,5 @@ Vue.use(Button)
   .use(TabbarItem)
   .use(Swipe)
   .use(SwipeItem)
+  .use(Cell)
+  .use(CellGroup)

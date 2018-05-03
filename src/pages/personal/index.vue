@@ -1,6 +1,16 @@
 <template>
   <div class="personal">
-    <abn-avatar/>
+    <abn-avatar class="avatar"/>
+    <van-cell-group>
+      <van-cell title="github"
+                is-link
+      >
+        <abn-icon iconClass="github"
+                  className="cell-icon-left"
+                  slot="icon"
+        />
+      </van-cell>
+    </van-cell-group>
   </div>
 </template>
 
@@ -15,5 +25,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+.personal
+  .avatar
+    margin .8rem auto
+  .cell-icon-left
+    font-size 16px
+    height 24px
+    line-height 24px
+    margin-right 5px
 </style>

@@ -11,5 +11,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+.barrage
+  padding .8rem
 </style>
