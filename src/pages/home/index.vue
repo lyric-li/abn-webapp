@@ -1,9 +1,9 @@
 <template>
-  <div class="abn-home">
-    <van-swipe class="abn-swipe"
+  <div class="home">
+    <van-swipe class="swipe"
                :autoplay="3000"
     >
-      <van-swipe-item class="abn-swipe-item"
+      <van-swipe-item class="swipe-item"
                       :key="index"
                       v-for="(item, index) in 5"
       >
@@ -20,12 +20,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.abn-home
-  .abn-swipe
+.home
+  .swipe
     background-color #fff
     height 20rem
     text-align center
-    .abn-swipe-item
+    .swipe-item
       height 20rem
       line-height 20rem
 </style>
