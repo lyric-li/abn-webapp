@@ -4,6 +4,8 @@ import store from '@/store'
 
 // 首页
 const home = reslove => require(['@/pages/home'], reslove)
+// 关注
+const follow = reslove => require(['@/pages/follow'], reslove)
 // 动弹
 const barrage = reslove => require(['@/pages/barrage'], reslove)
 // 个人中心
@@ -19,6 +21,14 @@ const router = new Router({
       component: home,
       meta: {
         titie: '首页'
+      }
+    },
+    {
+      path: '/follow',
+      name: 'follow',
+      component: follow,
+      meta: {
+        titie: '关注'
       }
     },
     {

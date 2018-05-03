@@ -7,7 +7,13 @@
       >
         首页
       </van-tabbar-item>
-      <van-tabbar-item icon="like-o" dot>发现</van-tabbar-item>
+      <van-tabbar-item icon="like-o"
+                       dot
+                       :to="{name: 'follow'}"
+                       replace
+      >
+        关注
+      </van-tabbar-item>
       <van-tabbar-item icon="chat"
                        info="20"
                        :to="{name: 'barrage'}"
