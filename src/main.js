@@ -8,6 +8,10 @@ import store from './store'
 import './vant'
 import './icons'
 import './utils/components'
+import './utils/mixins'
+
+import '@/assets/styl/app.styl'
+import '@/assets/vivify/vivify.min.css'
 
 Vue.config.productionTip = false
 

@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+@import '~@/assets/styl/variables.styl'
 .home
   .swipe
     background-color #fff

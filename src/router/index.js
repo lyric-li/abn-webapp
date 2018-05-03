@@ -2,7 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '@/store'
 
+// 首页
 const home = reslove => require(['@/pages/home'], reslove)
+// 动弹
+const barrage = reslove => require(['@/pages/barrage'], reslove)
 
 Vue.use(Router)
 
@@ -17,6 +20,14 @@ const router = new Router({
       }
     },
     {
+      path: '/barrage',
+      name: 'barrage',
+      component: barrage,
+      meta: {
+        titie: '动弹'
+      }
+    },
+    {
       path: '*',
       redirect: {
         name: 'home'
@@ -26,7 +37,7 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  const title = to.meta.titie || 'abn'
+  const title = to.meta.titie || 'All is to be nice'
   store.commit('SET_TITLE', title)
   next()
 })
