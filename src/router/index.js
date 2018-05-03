@@ -20,7 +20,8 @@ const router = new Router({
       name: 'home',
       component: home,
       meta: {
-        titie: '首页'
+        titie: '首页',
+        back: false
       }
     },
     {
@@ -28,7 +29,8 @@ const router = new Router({
       name: 'follow',
       component: follow,
       meta: {
-        titie: '关注'
+        titie: '关注',
+        back: false
       }
     },
     {
@@ -36,7 +38,8 @@ const router = new Router({
       name: 'barrage',
       component: barrage,
       meta: {
-        titie: '动弹'
+        titie: '动弹',
+        back: false
       }
     },
     {
@@ -44,7 +47,8 @@ const router = new Router({
       name: 'personal',
       component: personal,
       meta: {
-        titie: '个人中心'
+        titie: '个人中心',
+        back: false
       }
     },
     {
@@ -57,8 +61,35 @@ const router = new Router({
 })
 
 router.beforeEach((to, from, next) => {
+  // 设置导航栏
   const title = to.meta.titie || 'All is to be nice'
-  store.commit('SET_TITLE', title)
+  store.commit('navbar/SET_TITLE', title)
+  if (to.meta.back) {
+    store.commit('navbar/SET_LEFTTEXT', '返回')
+    store.commit('navbar/SET_LEFTARROW', true)
+  } else {
+    store.commit('navbar/SET_LEFTTEXT', '')
+    store.commit('navbar/SET_LEFTARROW', false)
+  }
+
+  // 记录 标签栏选中位置
+  const name = to.name
+  let temp = 0
+  switch (name) {
+    case 'home':
+      temp = 0
+      break
+    case 'follow':
+      temp = 1
+      break
+    case 'barrage':
+      temp = 2
+      break
+    case 'personal':
+      temp = 3
+      break
+  }
+  sessionStorage.setItem('active', temp)
   next()
 })
 

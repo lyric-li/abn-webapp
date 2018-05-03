@@ -39,6 +39,12 @@ export default {
     return {
       active: 0
     }
+  },
+  created () {
+    const active = sessionStorage.getItem('active')
+    if (active) {
+      this.active = parseInt(active)
+    }
   }
 }
 </script>

@@ -1,9 +1,9 @@
 <template>
   <div class="abn-navbar">
     <van-nav-bar
-      :title="$store.state.title"
-      left-text="返回"
-      left-arrow
+      :title="$store.state.navbar.title"
+      :left-text="$store.state.navbar.leftText"
+      :left-arrow="$store.state.navbar.leftArrow"
       @click-left="onClickLeft"
       @click-right="onClickRight"
     >
@@ -17,14 +17,9 @@
 <script>
 export default {
   name: 'abn-navbar',
-  data () {
-    return {
-      active: 0
-    }
-  },
   methods: {
     onClickLeft () {
-      console.log('返回')
+      this.$router.go(-1)
     },
     onClickRight () {
       window.location.href = 'https://gitee.com/lyric-li/abn-webapp'
