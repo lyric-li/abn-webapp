@@ -20,10 +20,10 @@ export default {
     return {
       swipes: [
         'static/swipe/1.jpg',
-        'static/swipe/2.jpg',
-        'static/swipe/3.jpg',
-        'static/swipe/4.jpg',
-        'static/swipe/5.jpg'
+        'static/swipe/1.jpg',
+        'static/swipe/1.jpg',
+        'static/swipe/1.jpg',
+        'static/swipe/1.jpg'
       ]
     }
   }
