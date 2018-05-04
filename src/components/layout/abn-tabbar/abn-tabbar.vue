@@ -7,22 +7,21 @@
       >
         首页
       </van-tabbar-item>
-      <van-tabbar-item icon="like-o"
+      <van-tabbar-item icon="password-view"
                        dot
-                       :to="{name: 'follow'}"
+                       :to="{name: 'slotspot'}"
                        replace
       >
-        关注
+        槽点
       </van-tabbar-item>
       <van-tabbar-item icon="chat"
                        info="20"
-                       :to="{name: 'barrage'}"
+                       :to="{name: 'roast'}"
                        replace
       >
-        动弹
+        吐槽
       </van-tabbar-item>
       <van-tabbar-item icon="contact"
-                       info="5"
                        :to="{name: 'personal'}"
                        replace
       >

@@ -1,16 +1,16 @@
 <template>
-  <div class="follow">
-    关注页面
+  <div class="roast">
+    吐槽页面
   </div>
 </template>
 
 <script>
 export default {
-  name: 'follow'
+  name: 'roast'
 }
 </script>
 
 <style lang="stylus" scoped>
-.follow
+.roast
   padding .8rem
 </style>

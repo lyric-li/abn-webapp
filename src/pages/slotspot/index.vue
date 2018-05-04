@@ -1,16 +1,16 @@
 <template>
-  <div class="barrage">
-    动弹页面
+  <div class="slotspot">
+    槽点页面
   </div>
 </template>
 
 <script>
 export default {
-  name: 'barrage'
+  name: 'slotspot'
 }
 </script>
 
 <style lang="stylus" scoped>
-.barrage
+.slotspot
   padding .8rem
 </style>

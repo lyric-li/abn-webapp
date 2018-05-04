@@ -5,9 +5,9 @@ import store from '@/store'
 // 首页
 const home = reslove => require(['@/pages/home'], reslove)
 // 关注
-const follow = reslove => require(['@/pages/follow'], reslove)
+const slotspot = reslove => require(['@/pages/slotspot'], reslove)
 // 动弹
-const barrage = reslove => require(['@/pages/barrage'], reslove)
+const roast = reslove => require(['@/pages/roast'], reslove)
 // 个人中心
 const personal = reslove => require(['@/pages/personal'], reslove)
 
@@ -25,20 +25,20 @@ const router = new Router({
       }
     },
     {
-      path: '/follow',
-      name: 'follow',
-      component: follow,
+      path: '/slotspot',
+      name: 'slotspot',
+      component: slotspot,
       meta: {
-        titie: '关注',
+        titie: '槽点',
         back: false
       }
     },
     {
-      path: '/barrage',
-      name: 'barrage',
-      component: barrage,
+      path: '/roast',
+      name: 'roast',
+      component: roast,
       meta: {
-        titie: '动弹',
+        titie: '吐槽',
         back: false
       }
     },
