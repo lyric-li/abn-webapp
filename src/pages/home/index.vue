@@ -5,9 +5,9 @@
     >
       <van-swipe-item class="swipe-item"
                       :key="index"
-                      v-for="(item, index) in 5"
+                      v-for="(swipe, index) in swipes"
       >
-        {{ item }}
+        <img v-lazy="swipe"/>
       </van-swipe-item>
     </van-swipe>
   </div>
@@ -15,7 +15,18 @@
 
 <script>
 export default {
-  name: 'home'
+  name: 'home',
+  data () {
+    return {
+      swipes: [
+        'static/swipe/1.jpg',
+        'static/swipe/2.jpg',
+        'static/swipe/3.jpg',
+        'static/swipe/4.jpg',
+        'static/swipe/5.jpg'
+      ]
+    }
+  }
 }
 </script>
 
@@ -29,4 +40,7 @@ export default {
     .swipe-item
       height 20rem
       line-height 20rem
+      > img
+        width 100%
+        height 20rem
 </style>

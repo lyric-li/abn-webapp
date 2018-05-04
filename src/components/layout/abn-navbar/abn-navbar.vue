@@ -22,7 +22,8 @@ export default {
       this.$router.go(-1)
     },
     onClickRight () {
-      window.location.href = 'https://gitee.com/lyric-li/abn-webapp'
+      const url = 'https://gitee.com/lyric-li/abn-webapp'
+      window.open(url, '_blank')
     }
   }
 }
