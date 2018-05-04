@@ -5,15 +5,16 @@
   "author": "lyric <1353758518@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
+    "build": "cross-env NODE_ENV=production ENV_CONFIG=prod node build/build.js",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "vant": "^1.1.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
@@ -38,6 +39,7 @@
     "chalk": "^2.0.1",
     "chromedriver": "^2.27.2",
     "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.1.4",
     "cross-spawn": "^5.0.1",
     "css-loader": "^0.28.0",
     "eslint": "^4.15.0",
