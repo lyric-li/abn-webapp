@@ -9,6 +9,7 @@ import './vant'
 import './icons'
 import './utils/components'
 import './utils/mixins'
+import './utils/filters'
 
 import '@/assets/styl/app.styl'
 import '@/assets/vivify/vivify.min.css'

@@ -4,9 +4,9 @@ import store from '@/store'
 
 // 首页
 const home = reslove => require(['@/pages/home'], reslove)
-// 关注
+// 槽点
 const slotspot = reslove => require(['@/pages/slotspot'], reslove)
-// 动弹
+// 吐槽
 const roast = reslove => require(['@/pages/roast'], reslove)
 // 个人中心
 const personal = reslove => require(['@/pages/personal'], reslove)
@@ -79,10 +79,10 @@ router.beforeEach((to, from, next) => {
     case 'home':
       temp = 0
       break
-    case 'follow':
+    case 'slotspot':
       temp = 1
       break
-    case 'barrage':
+    case 'roast':
       temp = 2
       break
     case 'personal':

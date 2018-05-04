@@ -2,11 +2,11 @@
   <div class="personal">
     <abn-avatar class="avatar"/>
     <van-cell-group>
-      <van-cell title="github"
+      <van-cell title="码云"
                 is-link
       >
-        <abn-icon iconClass="github"
-                  className="cell-icon-left"
+        <abn-icon class="cell-icon-left"
+                  iconClass="github"
                   slot="icon"
         />
       </van-cell>

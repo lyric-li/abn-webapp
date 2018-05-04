@@ -7,7 +7,9 @@ import {
   Swipe,
   SwipeItem,
   Cell,
-  CellGroup
+  CellGroup,
+  Card,
+  Icon
 } from 'vant'
 
 Vue.use(Button)
@@ -18,3 +20,5 @@ Vue.use(Button)
   .use(SwipeItem)
   .use(Cell)
   .use(CellGroup)
+  .use(Card)
+  .use(Icon)
