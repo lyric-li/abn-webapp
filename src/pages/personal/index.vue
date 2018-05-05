@@ -26,7 +26,7 @@ export default {
 
 <style lang="stylus" scoped>
 .personal
-  height calc(100% - 1.6rem)
+  height calc(100% + 1.6rem)
   .avatar
     margin .8rem auto
   .cell-icon-left
