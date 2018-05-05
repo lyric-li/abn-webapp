@@ -4,10 +4,10 @@ import Qs from 'qs'
 
 let host, port
 if (process.env.NODE_ENV === 'development') {
-  host = '139.219.185.33'
+  host = '127.0.0.1'
   port = '9527'
 } else {
-  host = '139.219.185.33'
+  host = '127.0.0.1'
   port = '9527'
 }
 const baseURL = `http://${host}:${port}`
@@ -24,7 +24,7 @@ const http = axios.create({
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded'
   },
-  timeout: 30000
+  timeout: 5000
 })
 
 export default http

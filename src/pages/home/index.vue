@@ -26,6 +26,9 @@ export default {
         'static/swipe/1.jpg'
       ]
     }
+  },
+  created () {
+    this.$store.dispatch('helloAbn')
   }
 }
 </script>
