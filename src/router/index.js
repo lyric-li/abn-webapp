@@ -11,8 +11,10 @@ const roast = reslove => require(['@/pages/roast'], reslove)
 // 个人中心
 const personal = reslove => require(['@/pages/personal'], reslove)
 
+// 安装路由插件
 Vue.use(Router)
 
+// 路由
 const router = new Router({
   routes: [
     {
@@ -60,6 +62,7 @@ const router = new Router({
   ]
 })
 
+// 路由守卫
 router.beforeEach((to, from, next) => {
   // 设置导航栏
   const title = to.meta.titie || 'All is to be nice'
@@ -91,6 +94,16 @@ router.beforeEach((to, from, next) => {
   }
   sessionStorage.setItem('active', temp)
   next()
+
+  // 设置路由切换动效
+  const toDepth = to.path.split('/').length
+  const fromDepth = from.path.split('/').length
+  if (toDepth === fromDepth) {
+    store.commit('SET_TRANSNAME', 'slide-fade')
+  } else {
+    const transName = toDepth > fromDepth ? 'slide-right' : 'slide-left'
+    store.commit('SET_TRANSNAME', transName)
+  }
 })
 
 export default router

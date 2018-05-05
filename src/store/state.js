@@ -1,5 +1,5 @@
 const state = {
-  title: 'abn'
+  transName: 'slide-fade'
 }
 
 export default state

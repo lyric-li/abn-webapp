@@ -1,2 +1,2 @@
-// 设置标题
-export const SET_TITLE = 'SET_TITLE'
+// 设置路由切换效果
+export const SET_TRANSNAME = 'SET_TRANSNAME'
