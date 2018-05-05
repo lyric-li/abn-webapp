@@ -33,6 +33,7 @@ export default {
 <style lang="stylus" scoped>
 @import '~@/assets/styl/variables.styl'
 .home
+  height 100%
   .swipe
     background-color #fff
     height 20rem

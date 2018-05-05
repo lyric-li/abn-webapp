@@ -13,4 +13,5 @@ export default {
 <style lang="stylus" scoped>
 .slotspot
   padding .8rem
+  height calc(100% - 1.6rem)
 </style>
