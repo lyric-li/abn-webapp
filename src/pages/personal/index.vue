@@ -11,6 +11,12 @@
         />
       </van-cell>
     </van-cell-group>
+    <van-cell-group>
+      <van-cell title="注销"
+                @click="jump({name: 'login'})"
+      >
+      </van-cell>
+    </van-cell-group>
   </div>
 </template>
 

@@ -10,6 +10,7 @@ import {
   CellGroup,
   Card,
   Icon,
+  Field,
   Lazyload
 } from 'vant'
 
@@ -23,4 +24,5 @@ Vue.use(Button)
   .use(CellGroup)
   .use(Card)
   .use(Icon)
+  .use(Field)
   .use(Lazyload, {})

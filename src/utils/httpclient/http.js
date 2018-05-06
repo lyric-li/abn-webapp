@@ -5,10 +5,10 @@ import Qs from 'qs'
 let host, port
 if (process.env.NODE_ENV === 'development') {
   host = '127.0.0.1'
-  port = '9527'
+  port = '14250'
 } else {
   host = '127.0.0.1'
-  port = '9527'
+  port = '14250'
 }
 const baseURL = `http://${host}:${port}`
 

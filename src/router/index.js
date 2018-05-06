@@ -2,6 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '@/store'
 
+// 登录
+const login = reslove => require(['@/pages/login'], reslove)
+// 注册
+const register = reslove => require(['@/pages/register'], reslove)
+// 内容
+const content = reslove => require(['@/pages/content'], reslove)
 // 首页
 const home = reslove => require(['@/pages/home'], reslove)
 // 槽点
@@ -18,45 +24,68 @@ Vue.use(Router)
 const router = new Router({
   routes: [
     {
-      path: '/home',
-      name: 'home',
-      component: home,
+      path: '/login',
+      name: 'login',
+      component: login,
       meta: {
-        titie: '首页',
-        back: false
+        titie: '登录'
       }
     },
     {
-      path: '/slotspot',
-      name: 'slotspot',
-      component: slotspot,
+      path: '/register',
+      name: 'register',
+      component: register,
       meta: {
-        titie: '槽点',
-        back: false
+        titie: '注册'
       }
     },
     {
-      path: '/roast',
-      name: 'roast',
-      component: roast,
-      meta: {
-        titie: '吐槽',
-        back: false
-      }
-    },
-    {
-      path: '/personal',
-      name: 'personal',
-      component: personal,
-      meta: {
-        titie: '个人中心',
-        back: false
-      }
+      path: '/content',
+      name: 'content',
+      component: content,
+      children: [
+        {
+          path: '/home',
+          name: 'home',
+          component: home,
+          meta: {
+            titie: '首页',
+            back: false
+          }
+        },
+        {
+          path: '/slotspot',
+          name: 'slotspot',
+          component: slotspot,
+          meta: {
+            titie: '槽点',
+            back: false
+          }
+        },
+        {
+          path: '/roast',
+          name: 'roast',
+          component: roast,
+          meta: {
+            titie: '吐槽',
+            back: false
+          }
+        },
+        {
+          path: '/personal',
+          name: 'personal',
+          component: personal,
+          meta: {
+            titie: '个人中心',
+            back: false
+          }
+        }
+      ]
     },
     {
       path: '*',
       redirect: {
-        name: 'home'
+        name: 'login'
       }
     }
   ]
