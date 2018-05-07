@@ -13,5 +13,5 @@ export default {
 <style lang="stylus" scoped>
 .abn-paper
   background-color #fff
-  padding .8rem
+  padding .08rem
 </style>

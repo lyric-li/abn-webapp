@@ -28,9 +28,6 @@ export default {
         'static/swipe/1.jpg'
       ]
     }
-  },
-  created () {
-    this.$store.dispatch('helloAbn')
   }
 }
 </script>
@@ -41,16 +38,16 @@ export default {
   height 100%
   .swipe
     background-color #fff
-    height 20rem
+    height 2rem
     text-align center
     .swipe-item
-      height 20rem
-      line-height 20rem
+      height 2rem
+      line-height 2rem
       > img
         width 100%
-        height 20rem
+        height 2rem
   .demo1
     font-size 16px
   .demo2
-    font-size 1.6rem
+    font-size .16rem
 </style>

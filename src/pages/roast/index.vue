@@ -60,10 +60,10 @@ export default {
 
 <style lang="stylus" scoped>
 .roast
-  margin-bottom .8rem
+  margin-bottom .08rem
   .bb
     box-shadow 0 0 5px #eee
-    margin-bottom .8rem
+    margin-bottom .08rem
   .tip
     text-align center
     color #909399

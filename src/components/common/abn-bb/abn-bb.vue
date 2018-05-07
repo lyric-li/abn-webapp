@@ -119,7 +119,7 @@ export default {
 
 <style lang="stylus" scoped>
 .bb-icon
-  margin-right 2.6rem
+  margin-right .26rem
   &:active
     background-color #eee
 </style>

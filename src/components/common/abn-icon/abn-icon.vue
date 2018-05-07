@@ -49,8 +49,8 @@ export default {
 .abn-icon
   display inline-block
   position relative
-  width 1.6rem
-  height 1.6rem
+  width .16rem
+  height .16rem
   .info
     position absolute
     left 50%
@@ -63,7 +63,7 @@ export default {
     padding 0 .3em
     text-align center
     min-width 1.2em
-    line-height 1.2
+    line-height 1.2em
     border-radius .6em
     -webkit-box-sizing border-box
     box-sizing border-box

@@ -32,12 +32,12 @@ export default {
 
 <style lang="stylus" scoped>
 .personal
-  padding .8rem 0
-  height calc(100% - 1.6rem)
+  padding .08rem 0
+  height calc(100% - .16rem)
   .avatar
     margin-left auto
     margin-right auto
-    margin-bottom .8rem
+    margin-bottom .08rem
   .cell-icon-left
     font-size 16px
     height 24px

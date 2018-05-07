@@ -73,10 +73,10 @@ export default {
     transform translate(0, -50%)
     width 100%
   .avatar
-    margin .8rem auto
+    margin .08rem auto
   .submit
-    margin .8rem auto
-    height 3.2rem
-    line-height 3.2rem
+    margin .08rem auto
+    height .32rem
+    line-height .32rem
     font-size 14px
 </style>
