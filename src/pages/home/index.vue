@@ -10,6 +10,8 @@
         <img v-lazy="swipe"/>
       </van-swipe-item>
     </van-swipe>
+    <div class="demo1">你好啊</div>
+    <div class="demo2">你好啊</div>
   </div>
 </template>
 
@@ -47,4 +49,8 @@ export default {
       > img
         width 100%
         height 20rem
+  .demo1
+    font-size 16px
+  .demo2
+    font-size 1.6rem
 </style>
