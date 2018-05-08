@@ -41,9 +41,8 @@
         注册
       </van-button>
       <div class="tip"
-           @click="jump({name: 'login'})"
       >
-        已有账号? 去登录
+        <span @click="jump({name: 'login'})">已有账号? 去登录</span>
       </div>
     </div>
   </div>

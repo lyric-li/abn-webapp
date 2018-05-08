@@ -31,9 +31,8 @@
         登录
       </van-button>
       <div class="tip"
-           @click="jump({name: 'register'})"
       >
-        没有账号? 立即创建
+        <span @click="jump({name: 'register'})">没有账号? 立即创建</span>
       </div>
     </div>
   </div>

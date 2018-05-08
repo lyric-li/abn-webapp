@@ -1,5 +1,5 @@
 import axios from 'axios'
-import Qs from 'qs'
+// import Qs from 'qs'
 // import encrypt from './encrypt'
 
 let host, port
@@ -17,12 +17,14 @@ const http = axios.create({
   transformRequest: [
     data => {
       // data = encrypt(data)
-      data = Qs.stringify(data)
+      // data = Qs.stringify(data)
+      data = JSON.stringify(data)
       return data
     }
   ],
   headers: {
-    'Content-Type': 'application/x-www-form-urlencoded'
+    // 'Content-Type': 'application/x-www-form-urlencoded'
+    'Content-Type': 'application/json;charset=UTF-8'
   },
   timeout: 5000
 })
