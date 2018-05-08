@@ -115,9 +115,18 @@ export default {
   text-align center
   .bb-avatar
     margin 0 auto
+.abn-bb
+  .van-card
+    padding .05rem .15rem .05rem .75rem
+    .van-card__thumb
+      left -0.12rem
 </style>
 
 <style lang="stylus" scoped>
+.abn-bb
+  .van-card
+    .van-card__thumb
+      left 0
 .bb-icon
   margin-right .26rem
   &:active
