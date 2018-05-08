@@ -5,25 +5,32 @@
       <van-cell-group>
         <van-field
           v-model="user.username"
+          type="text"
           label="用户名"
-          icon="clear"
-          placeholder="请输入用户名"
+          icon="contact"
+          placeholder="请输入用户名..."
           required
-          @click-icon="username = ''"
+          :error="username.error"
         />
         <van-field
           v-model="user.password"
-          type="password"
           label="密码"
-          placeholder="请输入密码"
+          :type="password.type"
+          :icon="password.icon"
+          placeholder="请输入密码..."
           required
+          :error="password.error"
+          @click-icon="showOrNotPassword"
         />
         <van-field
           v-model="user.password2"
-          type="password"
-          label="密码"
-          placeholder="请再次输入密码"
+          label="确认密码"
+          :type="password2.type"
+          :icon="password2.icon"
+          placeholder="请再次输入密码..."
           required
+          :error="password2.error"
+          @click-icon="showOrNotPassword2"
         />
       </van-cell-group>
       <van-button class="submit"
@@ -33,6 +40,11 @@
       >
         注册
       </van-button>
+      <div class="tip"
+           @click="jump({name: 'login'})"
+      >
+        已有账号? 去登录
+      </div>
     </div>
   </div>
 </template>
@@ -48,6 +60,21 @@ export default {
         username: '',
         password: '',
         password2: ''
+      },
+      username: {
+        error: false
+      },
+      password: {
+        show: false,
+        type: 'password',
+        icon: 'password-not-view',
+        error: false
+      },
+      password2: {
+        show: false,
+        type: 'password',
+        icon: 'password-not-view',
+        error: false
       }
     }
   },
@@ -56,14 +83,70 @@ export default {
   },
   methods: {
     ...mapActions({
-      registerUser: 'registerUser'
+      register: 'register'
     }),
+    // 是否显示密码
+    showOrNotPassword () {
+      const show = this.password.show = !this.password.show
+      if (show) {
+        this.password.type = 'text'
+        this.password.icon = 'password-view'
+      } else {
+        this.password.type = 'password'
+        this.password.icon = 'password-not-view'
+      }
+    },
+    // 是否显示密码
+    showOrNotPassword2 () {
+      const show = this.password2.show = !this.password2.show
+      if (show) {
+        this.password2.type = 'text'
+        this.password2.icon = 'password-view'
+      } else {
+        this.password2.type = 'password'
+        this.password2.icon = 'password-not-view'
+      }
+    },
+    // 校验表单
+    validate (user) {
+      let bool = true
+      if (!user.username) {
+        this.username.error = true
+        bool = false
+      }
+      if (!user.password) {
+        this.password.error = true
+        bool = false
+      }
+      if (!user.password2) {
+        this.password2.error = true
+        bool = false
+      }
+      if (user.password !== user.password2) {
+        this.password2.error = true
+        bool = false
+      }
+      return bool
+    },
+    // 提交注册
     submit (user) {
-      this.registerUser(user)
+      if (!this.validate(user)) return
+      this.register(user).then(data => {
+        console.log('注册成功:', data)
+        this.jump({name: 'login'})
+      }).catch(err => {
+        console.log('注册失败:', err)
+      })
     }
   }
 }
 </script>
+
+<style lang="stylus">
+.register
+  .van-field__icon
+    display inline !important
+</style>
 
 <style lang="stylus" scoped>
 .register
@@ -79,4 +162,8 @@ export default {
     height .32rem
     line-height .32rem
     font-size 14px
+  .tip
+    padding .08rem
+    text-align right
+    text-decoration underline
 </style>

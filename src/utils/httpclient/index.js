@@ -1,35 +1,48 @@
 import http from './http'
 
+// http 请求客户端
 const httpclient = {
-  async get (url, params) {
-    console.log('┏---------------------------------------------┓')
-    console.log(' 请求地址:', url)
-    console.log(' 请求参数:', params)
-    try {
-      const res = await http.get(url, { params })
-      const data = res.data
-      console.log(' 响应结果:', data)
-      console.log('┗---------------------------------------------┛')
-      return data
-    } catch (err) {
-      console.error(' 请求异常:', err)
-      console.log('┗---------------------------------------------┛')
-    }
+  // GET 请求
+  get (url, params) {
+    return new Promise((resolve, reject) => {
+      http.get(url, { params }).then(res => {
+        console.log('┏---------------------------------------------┓')
+        console.log(' 请求地址:', url)
+        console.log(' 请求参数:', params)
+        const data = res.data
+        console.log(' 响应结果:', data)
+        console.log('┗---------------------------------------------┛')
+        resolve(data)
+      }).catch(err => {
+        console.log('┏---------------------------------------------┓')
+        console.log(' 请求地址:', url)
+        console.log(' 请求参数:', params)
+        console.error(' 请求异常:', err)
+        console.log('┗---------------------------------------------┛')
+        reject(err)
+      })
+    })
   },
-  async post (url, params) {
-    console.log('┏---------------------------------------------┓')
-    console.log(' 请求地址:', url)
-    console.log(' 请求参数:', params)
-    try {
-      const res = await http.post(url, params)
-      const data = res.data
-      console.log(' 响应结果:', data)
-      console.log('┗---------------------------------------------┛')
-      return data
-    } catch (err) {
-      console.error(' 请求异常:', err)
-      console.log('┗---------------------------------------------┛')
-    }
+  // POST 请求
+  post (url, params) {
+    return new Promise((resolve, reject) => {
+      http.post(url, params).then(res => {
+        console.log('┏---------------------------------------------┓')
+        console.log(' 请求地址:', url)
+        console.log(' 请求参数:', params)
+        const data = res.data
+        console.log(' 响应结果:', data)
+        console.log('┗---------------------------------------------┛')
+        resolve(data)
+      }).catch(err => {
+        console.log('┏---------------------------------------------┓')
+        console.log(' 请求地址:', url)
+        console.log(' 请求参数:', params)
+        console.error(' 请求异常:', err)
+        console.log('┗---------------------------------------------┛')
+        reject(err)
+      })
+    })
   }
 }
 

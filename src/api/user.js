@@ -1,5 +1,6 @@
 const user = {
-  register: '/user/register'
+  register: '/user/register',
+  login: '/user/login'
 }
 
 export default user
