@@ -1,7 +1,9 @@
 <template>
   <div class="register">
     <div class="form">
-      <abn-avatar class="avatar"/>
+      <abn-avatar class="avatar"
+                  avatar="static/logo.png"
+      />
       <van-cell-group>
         <van-field
           v-model="user.username"
