@@ -13,6 +13,7 @@
           placeholder="请输入用户名..."
           required
           :error="username.error"
+          @focus="focus0"
         />
         <van-field
           v-model="user.password"
@@ -23,6 +24,7 @@
           required
           :error="password.error"
           @click-icon="showOrNotPassword"
+          @focus="focus1"
         />
         <van-field
           v-model="user.password2"
@@ -33,6 +35,7 @@
           required
           :error="password2.error"
           @click-icon="showOrNotPassword2"
+          @focus="focus2"
         />
       </van-cell-group>
       <van-button class="submit"
@@ -86,6 +89,24 @@ export default {
     ...mapActions({
       register: 'register'
     }),
+    // 用户名输入框获取焦点方法
+    focus0 () {
+      if (this.username.error) {
+        this.username.error = false
+      }
+    },
+    // 密码输入框获取焦点方法
+    focus1 () {
+      if (this.password.error) {
+        this.password.error = false
+      }
+    },
+    // 密码再次输入框获取焦点方法
+    focus2 () {
+      if (this.password2.error) {
+        this.password2.error = false
+      }
+    },
     // 是否显示密码
     showOrNotPassword () {
       const show = this.password.show = !this.password.show
