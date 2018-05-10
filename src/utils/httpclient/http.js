@@ -43,11 +43,16 @@ http.interceptors.request.use(config => {
 http.interceptors.response.use(res => {
   // 响应数据
   const data = res.data
-
+  // 响应码
+  const code = data.code
   // 响应描述信息
   const msg = data.message
 
   Toast(msg)
+
+  if (code !== 1) {
+    return Promise.reject(data)
+  }
   return res
 }, err => {
   Toast('服务器异常, 请稍后重试！')
