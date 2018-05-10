@@ -6,7 +6,11 @@
 
 <script>
 export default {
-  name: 'slotspot'
+  name: 'slotspot',
+  meta: {
+    titie: '槽点',
+    back: false
+  }
 }
 </script>
 

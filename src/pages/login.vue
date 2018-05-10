@@ -47,6 +47,9 @@ import AbnAvatar from '@/components/common/abn-avatar'
 import { mapActions } from 'vuex'
 export default {
   name: 'login',
+  meta: {
+    title: '登录'
+  },
   data () {
     return {
       user: {

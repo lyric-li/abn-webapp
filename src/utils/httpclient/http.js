@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Toast } from 'vant'
 // import Qs from 'qs'
 // import encrypt from './encrypt'
 
@@ -26,7 +27,31 @@ const http = axios.create({
     // 'Content-Type': 'application/x-www-form-urlencoded'
     'Content-Type': 'application/json;charset=UTF-8'
   },
-  timeout: 5000
+  timeout: 25000
+})
+
+http.interceptors.request.use(config => {
+  Toast.loading({
+    mask: true,
+    message: '请稍后...'
+  })
+  return config
+}, err => {
+  return Promise.reject(err)
+})
+
+http.interceptors.response.use(res => {
+  // 响应数据
+  const data = res.data
+
+  // 响应描述信息
+  const msg = data.message
+
+  Toast(msg)
+  return res
+}, err => {
+  Toast('服务器异常, 请稍后重试！')
+  return Promise.reject(err)
 })
 
 export default http

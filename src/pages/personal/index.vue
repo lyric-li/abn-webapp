@@ -24,6 +24,10 @@
 import AbnAvatar from '@/components/common/abn-avatar'
 export default {
   name: 'personal',
+  meta: {
+    titie: '个人中心',
+    back: false
+  },
   components: {
     AbnAvatar
   }

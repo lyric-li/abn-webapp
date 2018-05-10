@@ -11,6 +11,7 @@ import {
   Card,
   Icon,
   Field,
+  Toast,
   Lazyload
 } from 'vant'
 
@@ -25,4 +26,5 @@ Vue.use(Button)
   .use(Card)
   .use(Icon)
   .use(Field)
+  .use(Toast)
   .use(Lazyload, {})
