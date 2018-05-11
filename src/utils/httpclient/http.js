@@ -39,6 +39,7 @@ http.interceptors.request.use(config => {
 })
 
 http.interceptors.response.use(res => {
+  Toast.clear()
   // 响应数据
   const data = res.data
   if (data.code === 0) {

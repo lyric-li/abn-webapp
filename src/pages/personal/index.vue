@@ -13,7 +13,7 @@
     </van-cell-group>
     <van-cell-group>
       <van-cell title="注销"
-                @click="jump({name: 'login'})"
+                @click="logout"
       >
       </van-cell>
     </van-cell-group>
@@ -30,6 +30,12 @@ export default {
   },
   components: {
     AbnAvatar
+  },
+  methods: {
+    logout () {
+      this.$store.commit('SAVE_USER', '')
+      this.jump({name: 'login'})
+    }
   }
 }
 </script>

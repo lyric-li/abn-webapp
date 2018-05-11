@@ -27,6 +27,7 @@ const actions = {
         username,
         password
       }).then(data => {
+        commit('SAVE_USER', data)
         resolve(data)
       }).catch(err => {
         reject(err)

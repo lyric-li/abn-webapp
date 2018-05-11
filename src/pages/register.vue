@@ -56,6 +56,7 @@
 <script>
 import AbnAvatar from '@/components/common/abn-avatar'
 import { mapActions } from 'vuex'
+import { Toast } from 'vant'
 export default {
   name: 'register',
   meta: {
@@ -155,12 +156,10 @@ export default {
     },
     // 提交注册
     submit (user) {
-      // if (!this.validate(user)) return
+      if (!this.validate(user)) return
       this.register(user).then(data => {
-        console.log('注册成功:', data)
         this.jump({name: 'login'})
-      }).catch(err => {
-        console.log('注册失败:', err)
+        Toast('用户名注册成功')
       })
     }
   }

@@ -114,10 +114,7 @@ export default {
     submit (user) {
       if (!this.validate(user)) return
       this.login(user).then(data => {
-        console.log('登录成功:', data)
         this.jump({name: 'home'})
-      }).catch(err => {
-        console.log('登录失败:', err)
       })
     }
   }
