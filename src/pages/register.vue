@@ -155,7 +155,7 @@ export default {
     },
     // 提交注册
     submit (user) {
-      if (!this.validate(user)) return
+      // if (!this.validate(user)) return
       this.register(user).then(data => {
         console.log('注册成功:', data)
         this.jump({name: 'login'})

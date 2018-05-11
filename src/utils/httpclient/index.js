@@ -12,7 +12,7 @@ const httpclient = {
         const data = res.data
         console.log(' 响应结果:', data)
         console.log('┗---------------------------------------------┛')
-        resolve(data)
+        resolve(data.result)
       }).catch(err => {
         console.log('┏---------------------------------------------┓')
         console.log(' 请求地址:', url)
@@ -33,7 +33,7 @@ const httpclient = {
         const data = res.data
         console.log(' 响应结果:', data)
         console.log('┗---------------------------------------------┛')
-        resolve(data)
+        resolve(data.result)
       }).catch(err => {
         console.log('┏---------------------------------------------┓')
         console.log(' 请求地址:', url)

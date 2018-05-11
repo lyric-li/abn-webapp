@@ -34,14 +34,14 @@ const level2 = {
 }
 
 const files = require.context('../pages', true, /\.vue$/)
-console.log('files:', files)
-console.log('keys:', files.keys())
+// console.log('files:', files)
+// console.log('keys:', files.keys())
 
 files.keys().map(key => {
-  console.log('key:', key)
-  console.log('file:', files(key).default)
-  const id = files.resolve(key)
-  console.log('id:', id)
+  // console.log('key:', key)
+  // console.log('file:', files(key).default)
+  // const id = files.resolve(key)
+  // console.log('id:', id)
 
   const component = files(key).default
   const path = `/${component.name}`
@@ -56,7 +56,7 @@ files.keys().map(key => {
   }
 
   const depth = key.split('/').length
-  console.log('depth:', depth)
+  // console.log('depth:', depth)
   // 一级路由
   if (depth === 2) {
     if (name === 'abn') {
@@ -80,7 +80,7 @@ routes.push({
   }
 })
 
-console.log('routes:', routes)
+// console.log('routes:', routes)
 
 const router = new Router({
   routes: routes

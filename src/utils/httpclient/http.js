@@ -1,6 +1,6 @@
 import axios from 'axios'
+import Qs from 'qs'
 import { Toast } from 'vant'
-// import Qs from 'qs'
 // import encrypt from './encrypt'
 
 let host, port
@@ -18,14 +18,12 @@ const http = axios.create({
   transformRequest: [
     data => {
       // data = encrypt(data)
-      // data = Qs.stringify(data)
-      data = JSON.stringify(data)
+      data = Qs.stringify(data)
       return data
     }
   ],
   headers: {
-    // 'Content-Type': 'application/x-www-form-urlencoded'
-    'Content-Type': 'application/json;charset=UTF-8'
+    'Content-Type': 'application/x-www-form-urlencoded'
   },
   timeout: 25000
 })
@@ -43,14 +41,11 @@ http.interceptors.request.use(config => {
 http.interceptors.response.use(res => {
   // 响应数据
   const data = res.data
-  // 响应码
-  const code = data.code
-  // 响应描述信息
-  const msg = data.message
-
-  Toast(msg)
-
-  if (code !== 1) {
+  if (data.code === 0) {
+    Toast(data.reason)
+    return Promise.reject(data)
+  } else if (data.code === -1) {
+    Toast('服务器异常, 请稍后重试！')
     return Promise.reject(data)
   }
   return res
