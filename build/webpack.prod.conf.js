@@ -12,9 +12,12 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 
-const env = process.env.NODE_ENV === 'testing'
-  ? require('../config/test.env')
-  : require('../config/prod.env')
+let env = null
+if (process.env.NODE_ENV === 'testing') {
+  env = require('../config/test.env')
+} else {
+  env = require(`../config/${process.env.env_config}.env`)
+}
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {

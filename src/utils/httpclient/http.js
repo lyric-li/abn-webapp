@@ -3,18 +3,20 @@ import Qs from 'qs'
 import { Toast } from 'vant'
 // import encrypt from './encrypt'
 
-let host, port
-if (process.env.NODE_ENV === 'development') {
-  host = '127.0.0.1'
-  port = '14250'
-} else {
-  host = '127.0.0.1'
-  port = '14250'
-}
-const baseURL = `http://${host}:${port}`
+// console.log('env:', process.env)
+
+// let host, port
+// if (process.env.NODE_ENV === 'development') {
+//   host = '127.0.0.1'
+//   port = '14250'
+// } else {
+//   host = '127.0.0.1'
+//   port = '14250'
+// }
+// const baseURL = `http://${host}:${port}`
 
 const http = axios.create({
-  baseURL: baseURL,
+  baseURL: process.env.BASE_API,
   transformRequest: [
     data => {
       // data = encrypt(data)
