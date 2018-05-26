@@ -14,7 +14,7 @@ import AbnNavbar from '@/components/layout/abn-navbar'
 import AbnTabbar from '@/components/layout/abn-tabbar'
 import AbnContainer from '@/components/layout/abn-container'
 export default {
-  name: 'abn',
+  name: 'layout',
   components: {
     AbnNavbar,
     AbnTabbar,

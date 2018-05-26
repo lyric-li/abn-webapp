@@ -18,10 +18,6 @@
 <script>
 export default {
   name: 'home',
-  meta: {
-    titie: '首页',
-    back: false
-  },
   data () {
     return {
       swipes: [
