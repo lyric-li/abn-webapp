@@ -12,10 +12,6 @@
 import AbnPoint from '@/components/common/abn-point'
 export default {
   name: 'slotspot',
-  meta: {
-    titie: '槽点',
-    back: false
-  },
   components: {
     AbnPoint
   }

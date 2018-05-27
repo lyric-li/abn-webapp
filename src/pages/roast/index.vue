@@ -25,10 +25,6 @@
 import AbnBb from '@/components/common/abn-bb'
 export default {
   name: 'roast',
-  meta: {
-    titie: '吐槽',
-    back: false
-  },
   data () {
     return {
       bb: {

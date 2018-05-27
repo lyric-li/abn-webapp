@@ -59,9 +59,6 @@ import { mapActions } from 'vuex'
 import { Toast } from 'vant'
 export default {
   name: 'register',
-  meta: {
-    titie: '注册'
-  },
   data () {
     return {
       user: {

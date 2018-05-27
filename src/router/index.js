@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '@/store'
 
+import NProgress from 'nprogress' // progress bar
+import 'nprogress/nprogress.css'// progress bar style
+
 // 安装路由插件
 Vue.use(Router)
 
@@ -19,58 +22,6 @@ const slotspot = reslove => require(['@/pages/slotspot'], reslove)
 const roast = reslove => require(['@/pages/roast'], reslove)
 // 个人中心
 const personal = reslove => require(['@/pages/personal'], reslove)
-
-// // 一级路由
-// const level1 = []
-
-// // 二级路由
-// const level2 = {
-//   path: '/content',
-//   name: 'content',
-//   component: {},
-//   children: []
-// }
-
-// const files = require.context('../pages', true, /\.vue$/)
-// files.keys().map(key => {
-//   const component = files(key).default
-//   const path = `/${component.name}`
-//   const name = component.name
-//   const meta = component.meta
-//   const route = {
-//     path,
-//     name,
-//     component,
-//     meta
-//   }
-//   const depth = key.split('/').length
-//   // console.log('depth:', depth)
-//   // 一级路由
-//   if (depth === 2) {
-//     if (name === 'abn') {
-//       level2.component = component
-//       return
-//     }
-//     level1.push(route)
-//   }
-//   // 二级路由
-//   if (depth === 3) {
-//     level2.children.push(route)
-//   }
-// })
-
-// // 路由对象
-// const routes = level1.concat(level2)
-// routes.push({
-//   path: '*',
-//   redirect: {
-//     name: 'login'
-//   }
-// })
-
-// const router = new Router({
-//   routes: routes
-// })
 
 // 路由
 const router = new Router({
@@ -143,8 +94,12 @@ const router = new Router({
   ]
 })
 
-// 路由守卫
+/* 权限验证 */
+// 忽略名单
+const ignores = ['login']
+// 全局守卫
 router.beforeEach((to, from, next) => {
+  NProgress.start() // start progress bar
   // 设置导航栏
   const title = to.meta.titie || 'All is to be nice'
   store.commit('navbar/SET_TITLE', title)
@@ -174,7 +129,6 @@ router.beforeEach((to, from, next) => {
       break
   }
   sessionStorage.setItem('active', temp)
-  next()
 
   // 设置路由切换动效
   const toDepth = to.path.split('/').length
@@ -185,6 +139,26 @@ router.beforeEach((to, from, next) => {
     const transName = toDepth > fromDepth ? 'slide-right' : 'slide-left'
     store.commit('SET_TRANSNAME', transName)
   }
+
+  // 不校验直接跳转
+  if (ignores.includes(to.name)) {
+    next()
+  } else {
+    // 登录验证
+    const user = store.state.user
+    console.log('user:', user)
+    if (user) {
+      next()
+    } else {
+      next({name: 'login'})
+      NProgress.done() // if current page is login will not trigger afterEach hook, so manually handle it
+    }
+  }
+})
+
+// 全局后置守卫
+router.afterEach(() => {
+  NProgress.done() // finish progress bar
 })
 
 export default router
