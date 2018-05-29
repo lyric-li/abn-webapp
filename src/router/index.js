@@ -96,7 +96,7 @@ const router = new Router({
 
 /* 权限验证 */
 // 忽略名单
-const ignores = ['login']
+const ignores = ['login', 'register']
 // 全局守卫
 router.beforeEach((to, from, next) => {
   NProgress.start() // start progress bar
