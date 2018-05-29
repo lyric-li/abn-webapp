@@ -71,7 +71,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
   管理模块状态，存放在 `src/store/modules` 下，其中 `index.js` 作为模块统一处理文件，请勿修改
 
-其它
+### 其它
 
 - 工具类
 
@@ -88,3 +88,30 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 - 注册全局混合
 
   在 `src/utils/mixins.js` 文件中统一注册
+
+
+## 开发规范
+
+代码格式、命名规范等，以 `ESLint Standard` 规范为基础标准
+
+- 字符串统一用 `''`
+- 判断相等统一用 `===`
+
+
+## 技术栈
+
+### 基础框架
+
+- [vue](https://cn.vuejs.org/)
+- [vue-router](https://router.vuejs.org/zh/)
+- [vuex](https://vuex.vuejs.org/zh/)
+
+### 第三方插件
+
+- [axios](https://github.com/axios/axios)
+- [vant](https://www.youzanyun.com/zanui/vant#/zh-CN/intro)
+
+
+## 预览
+
+![预览图](./preview.png)
