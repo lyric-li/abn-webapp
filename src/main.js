@@ -10,7 +10,7 @@ import './icons'
 import './utils/components'
 import './utils/mixins'
 import './utils/filters'
-// import './utils/amfe-flexible/index'
+import i18n from './utils/i18n'
 
 import '@/assets/styl/app.styl'
 import '@/assets/vivify/vivify.min.css'
@@ -20,6 +20,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  i18n,
   router,
   store,
   components: { App },
