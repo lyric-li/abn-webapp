@@ -12,6 +12,8 @@ import {
   Icon,
   Field,
   Toast,
+  Row,
+  Col,
   Lazyload
 } from 'vant'
 
@@ -27,4 +29,6 @@ Vue.use(Button)
   .use(Icon)
   .use(Field)
   .use(Toast)
+  .use(Row)
+  .use(Col)
   .use(Lazyload, {})

@@ -3,6 +3,7 @@
     <div class="form">
       <abn-avatar class="avatar"
                   avatar="static/logo.png"
+                  @click.native="jump({name: 'egg'})"
       />
       <van-cell-group>
         <van-field

@@ -8,6 +8,8 @@ import 'nprogress/nprogress.css'// progress bar style
 // 安装路由插件
 Vue.use(Router)
 
+// 彩蛋
+const egg = reslove => require(['@/pages/egg'], reslove)
 // 登录
 const login = reslove => require(['@/pages/login'], reslove)
 // 注册
@@ -26,6 +28,14 @@ const personal = reslove => require(['@/pages/personal'], reslove)
 // 路由
 const router = new Router({
   routes: [
+    {
+      path: '/egg',
+      name: 'egg',
+      component: egg,
+      meta: {
+        titie: '彩蛋'
+      }
+    },
     {
       path: '/login',
       name: 'login',
@@ -96,7 +106,7 @@ const router = new Router({
 
 /* 权限验证 */
 // 忽略名单
-const ignores = ['login', 'register']
+const ignores = ['login', 'register', 'egg']
 // 全局守卫
 router.beforeEach((to, from, next) => {
   NProgress.start() // start progress bar
