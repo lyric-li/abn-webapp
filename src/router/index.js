@@ -8,8 +8,6 @@ import 'nprogress/nprogress.css'// progress bar style
 // 安装路由插件
 Vue.use(Router)
 
-// 彩蛋
-const egg = reslove => require(['@/pages/egg'], reslove)
 // 登录
 const login = reslove => require(['@/pages/login'], reslove)
 // 注册
@@ -25,17 +23,16 @@ const roast = reslove => require(['@/pages/roast'], reslove)
 // 个人中心
 const personal = reslove => require(['@/pages/personal'], reslove)
 
+// 彩蛋
+const egg = reslove => require(['@/pages/egg'], reslove)
+// 3D
+const three = reslove => require(['@/pages/three'], reslove)
+// 3D statr
+const threeStart = reslove => require(['@/pages/three/start'], reslove)
+
 // 路由
 const router = new Router({
   routes: [
-    {
-      path: '/egg',
-      name: 'egg',
-      component: egg,
-      meta: {
-        titie: '彩蛋'
-      }
-    },
     {
       path: '/login',
       name: 'login',
@@ -91,6 +88,33 @@ const router = new Router({
           meta: {
             titie: '个人中心',
             back: false
+          }
+        },
+        {
+          path: '/egg',
+          name: 'egg',
+          component: egg,
+          meta: {
+            titie: '彩蛋'
+          }
+        },
+        {
+          path: '/personal/three',
+          name: 'three',
+          component: three,
+          meta: {
+            titie: '3D',
+            back: true
+          }
+        },
+        {
+          path: '/personal/three/start',
+          name: 'three-start',
+          component: threeStart,
+          meta: {
+            titie: '第一个三维场景',
+            back: true,
+            keepalive: true
           }
         }
       ]
@@ -160,7 +184,8 @@ router.beforeEach((to, from, next) => {
     if (user) {
       next()
     } else {
-      next({name: 'login'})
+      next()
+      // next({name: 'login'})
       NProgress.done() // if current page is login will not trigger afterEach hook, so manually handle it
     }
   }

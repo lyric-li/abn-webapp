@@ -6,7 +6,7 @@
       </transition>
     </keep-alive>
     <transition :name="$store.state.transName">
-      <router-view></router-view>
+      <router-view v-if="!$route.meta.keepalive"></router-view>
     </transition>
   </div>
 </template>

@@ -20,6 +20,7 @@ const actions = {
   },
   // 用户登录
   login ({commit, state}, userInfo) {
+    commit('SAVE_USER', userInfo)
     const username = userInfo.username
     const password = md5(userInfo.password)
     return new Promise((resolve, reject) => {

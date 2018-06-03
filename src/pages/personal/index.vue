@@ -12,6 +12,13 @@
       </van-cell>
     </van-cell-group>
     <van-cell-group>
+      <van-cell title="Three Library"
+                is-link
+                @click="jump({name: 'three'})"
+      >
+      </van-cell>
+    </van-cell-group>
+    <van-cell-group>
       <van-cell title="注销"
                 @click="logout"
       >

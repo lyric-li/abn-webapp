@@ -114,6 +114,7 @@ export default {
       this.login(user).then(data => {
         this.jump({name: 'home'})
       })
+      this.jump({name: 'home'})
     }
   }
 }
