@@ -47,3 +47,11 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.abn-tabbar
+  .van-tabbar--fixed
+    left 0
+    bottom 0
+    position relative
+</style>

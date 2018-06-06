@@ -1088,7 +1088,7 @@ babel-register@^6.22.0, babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@6.x, babel-runtime@^6.18.0, babel-runtime@^6.20.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+babel-runtime@6.x, babel-runtime@^6.0.0, babel-runtime@^6.18.0, babel-runtime@^6.20.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "http://registry.npm.taobao.org/babel-runtime/download/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -1169,6 +1169,12 @@ bcrypt-pbkdf@^1.0.0:
   resolved "http://registry.npm.taobao.org/bcrypt-pbkdf/download/bcrypt-pbkdf-1.0.1.tgz#63bc5dcb61331b92bc05fd528953c33462a06f8d"
   dependencies:
     tweetnacl "^0.14.3"
+
+better-scroll@^1.11.1:
+  version "1.11.1"
+  resolved "http://registry.npm.taobao.org/better-scroll/download/better-scroll-1.11.1.tgz#60a6ab41239152a8aa1cb78ca5e0680890cbdd06"
+  dependencies:
+    babel-runtime "^6.0.0"
 
 bfj-node4@^5.2.0:
   version "5.3.1"
@@ -7563,6 +7569,14 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
+tween.js@^16.6.0:
+  version "16.6.0"
+  resolved "http://registry.npm.taobao.org/tween.js/download/tween.js-16.6.0.tgz#739104c9336cc4f11ee53f9ce7cede51e6723624"
+
+tweenjs@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/tweenjs/download/tweenjs-1.0.2.tgz#768869c4d4ba91fdb4c5ccc661969c58138555af"
+
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "http://registry.npm.taobao.org/tweetnacl/download/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
@@ -7798,6 +7812,10 @@ vant@^1.1.0:
 vary@~1.1.2:
   version "1.1.2"
   resolved "http://registry.npm.taobao.org/vary/download/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
+
+velocity-animate@^1.5.1:
+  version "1.5.1"
+  resolved "http://registry.npm.taobao.org/velocity-animate/download/velocity-animate-1.5.1.tgz#606837047bab8fbfb59a636d1d82ecc3f7bd71a6"
 
 vendors@^1.0.0:
   version "1.0.2"

@@ -155,10 +155,11 @@ export default {
 .egg
   text-align center
   width 75%
-  position absolute
-  top 45%
-  left 50%
-  transform translate(-50%, -50%)
+  margin 0 auto
+  // position absolute
+  // top 45%
+  // left 50%
+  // transform translate(-50%, -50%)
   .slogan
     margin-bottom .50rem
   .balance
