@@ -110,6 +110,9 @@ export default {
     },
     // 提交登录
     submit (user) {
+      this.$toast({
+        text: '我是一个吐司...'
+      })
       if (!this.validate(user)) return
       this.login(user).then(data => {
         this.jump({name: 'home'})

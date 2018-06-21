@@ -11,9 +11,14 @@ import './utils/components'
 import './utils/mixins'
 import './utils/filters'
 import i18n from './utils/i18n'
+import sleep from './utils/sleep'
+
+import './components/common/abn-toast'
 
 import '@/assets/styl/app.styl'
 import '@/assets/vivify/vivify.min.css'
+
+Vue.prototype.$sleep = sleep
 
 Vue.config.productionTip = false
 
